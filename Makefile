@@ -1,8 +1,6 @@
 # Extract configuration
 CONFIG_FILE := build.config
-
-CONFIG_HELLO := $(shell grep CONFIG_HELLO $(CONFIG_FILE) | cut -d '=' -f 2)
-CONFIG_BYE := $(shell grep CONFIG_BYE $(CONFIG_FILE) | cut -d '=' -f 2)
+include $(CONFIG_FILE)
 
 # Source files
 SRC := main.c
